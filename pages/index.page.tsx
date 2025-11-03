@@ -42,15 +42,15 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
     <>
       <Hero title="The History of HTML" subtitle="A journey through the evolution of the web's foundation" />
       
-      <div class="main-container">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-[280px_1fr_320px] gap-8 px-4 xl:px-8 pt-16 items-start">
         {/* Left Sidebar */}
-        <div class="left-sidebar">
+        <div class="xl:sticky xl:top-8 xl:h-fit">
           <Sidebar milestones={siteData.milestones} title="HTML Milestones" />
         </div>
 
         {/* Main Content */}
-        <main class="main-content">
-          <div class="timeline-feed">
+        <main class="min-h-screen">
+          <div class="space-y-8">
             {sortedTimeline.map((item: TimelineItem, _index: number) => (
               <div key={item.year + item.title}>
                 <TimelineCard item={item} />
@@ -60,7 +60,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
         </main>
 
         {/* Right Sidebar */}
-        <div class="right-sidebar">
+        <div>
           <RightSidebar stats={siteData.stats} quickFacts={siteData.quickFacts} />
         </div>
       </div>

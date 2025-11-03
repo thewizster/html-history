@@ -129,12 +129,44 @@ export default {
       image: "https://picsum.photos/400/200?random=17"
     },
     {
+      year: 2022,
+      title: "WHATWG strengthens HTML Living Standard collaboration",
+      desc: "Enhanced alignment with W3C; improves patent policy and interoperability for ongoing development.",
+      category: "Future",
+      icon: "https://picsum.photos/48?random=19",
+      image: "https://picsum.photos/400/200?random=19"
+    },
+    {
+      year: 2023,
+      title: "W3C endorses Encrypted Media Extensions in HTML",
+      desc: "Reverses stance on EME; supports secure multimedia playback with privacy and accessibility gains.",
+      category: "Future",
+      icon: "https://picsum.photos/48?random=20",
+      image: "https://picsum.photos/400/200?random=20"
+    },
+    {
+      year: 2024,
+      title: "HTML Standard January Review Draft published",
+      desc: "WHATWG releases draft for patent review; includes updates on APIs, elements, and conformance criteria.",
+      category: "Future",
+      icon: "https://picsum.photos/48?random=21",
+      image: "https://picsum.photos/400/200?random=21"
+    },
+    {
       year: 2021,
       title: "HTML Living Standard",
       desc: "WHATWG fully maintains HTML as continuously evolving spec; W3C snapshots discontinued.",
       category: "Future",
       icon: "https://picsum.photos/48?random=8",
       image: "https://picsum.photos/400/200?random=8"
+    },
+    {
+      year: 2025,
+      title: "HTML Living Standard updated with new alt text guidance",
+      desc: "WHATWG refines accessibility rules for images, clarifying alt attributes in private contexts like emails.",
+      category: "Future",
+      icon: "https://picsum.photos/48?random=18",
+      image: "https://picsum.photos/400/200?random=18"
     }
   ],
   milestones: [
@@ -192,10 +224,30 @@ export default {
       id: "living",
       title: "Living Standard",
       year: 2021
+    },
+    {
+      id: "2022collab",
+      title: "WHATWG Collaboration",
+      year: 2022
+    },
+    {
+      id: "2023eme",
+      title: "EME Endorsement",
+      year: 2023
+    },
+    {
+      id: "2024draft",
+      title: "2024 Review Draft",
+      year: 2024
+    },
+    {
+      id: "2025update",
+      title: "2025 Alt Text Update",
+      year: 2025
     }
   ],
   stats: {
-    totalEntries: 17,
+    totalEntries: 21,
     yearsSpanned: 32,
     majorVersions: 8
   },
@@ -206,6 +258,8 @@ export default {
     "Tim Berners-Lee created the first web page in December 1990",
     "The Living Standard means HTML evolves continuously via WHATWG",
     "HTML 4.01 (1999) was the last version before XHTML and HTML5",
-    "Over 90% of websites used HTML5 by 2017"
+    "Over 90% of websites used HTML5 by 2017",
+    "2025 update enhances image accessibility for private documents",
+    "W3C endorsed EME in 2023 for secure media playback"
   ]
 };
