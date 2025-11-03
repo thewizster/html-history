@@ -8,9 +8,10 @@ A stunning, interactive timeline showcasing the evolution of HTML from its incep
 
 ### **🎨 Visual Experience**
 - **Immersive Hero Section**: Full-screen animated hero with code rain effects, floating HTML elements, and gradient animations
-- **Modern 3-Column Layout**: Sticky sidebars with main timeline content
+- **Modern 3-Column Layout**: Responsive grid with sticky left navigation and scrollable content
 - **Interactive Timeline Cards**: Beautiful cards with avatars, categories, and hover animations
-- **Tech-Focused Design**: Blue-themed color scheme perfect for technical content
+- **Tailwind CSS Design System**: Utility-first CSS framework for consistent, maintainable styling
+- **Tech-Focused Theme**: Blue-themed color palette with custom design tokens
 - **Glassmorphism Effects**: Modern backdrop-blur and transparency effects
 
 ### **⚡ Advanced Animations**
@@ -33,9 +34,11 @@ A stunning, interactive timeline showcasing the evolution of HTML from its incep
 This project showcases best practices for building static sites with Lume:
 
 - **JSX Templates**: Modern component-based templating with type safety
+- **Tailwind CSS Integration**: Utility-first styling with Play CDN approach
 - **Separated Data Layer**: Timeline data stored in external TypeScript files
-- **Modular Layouts**: Reusable layout components with proper HTML structure
-- **Component-Based**: Easily extensible with additional JSX components
+- **Modular Layouts**: Reusable layout components with consistent styling
+- **Component-Based Architecture**: Easily extensible with additional JSX components
+- **Modern CSS Approach**: Zero build step required for CSS processing
 
 ## 📂 Project Structure
 
@@ -129,14 +132,15 @@ milestones: [
 ]
 ```
 
-### Styling & Animations
+### Styling & CSS Framework
 
-The main styles are located in `pages/_includes/layout.tsx`. The design features:
-- **Modern CSS Features**: Custom properties, CSS Grid, Flexbox
-- **Advanced Animations**: Keyframe animations, transitions, transforms
-- **Responsive Design**: Clamp functions, viewport units, media queries
-- **Visual Effects**: Backdrop filters, gradients, shadows
-- **Performance**: Hardware-accelerated animations, efficient selectors
+This project uses **Tailwind CSS v4** with the Play CDN for styling:
+- **Tailwind CSS Play CDN**: Latest v4 implementation with `@tailwindcss/browser`
+- **Custom Theme Configuration**: Extended color palette and font family via `@theme` directive
+- **Utility-First Approach**: All components styled with Tailwind utility classes
+- **Custom Animations**: Preserved hero animations (code rain, gradient text, floating elements)
+- **Responsive Design**: Mobile-first approach with Tailwind's responsive utilities
+- **Performance**: Minimal CSS bundle with only used utilities
 
 ### Component Customization
 
@@ -146,13 +150,31 @@ Modify individual components in `pages/_components/`:
 - **Sidebar.tsx**: Modify navigation and milestone display
 - **RightSidebar.tsx**: Add new statistics or resources
 
-### Layout Customization
+### Tailwind CSS Customization
 
-Modify `pages/_includes/layout.tsx` to:
-- Add additional meta tags or external resources
-- Customize CSS custom properties and color scheme
-- Modify responsive breakpoints and layout structure
-- Add new animation effects or visual elements
+#### Theme Configuration
+Modify the `@theme` directive in `pages/_includes/layout.tsx`:
+```css
+@theme {
+  --font-family-inter: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-primary-blue: #1e40af;
+  --color-secondary-blue: #3b82f6;
+  --color-light-blue: #eff6ff;
+  --color-dark-blue: #1e3a8a;
+}
+```
+
+#### Component Styling
+All components use Tailwind utility classes:
+- **Responsive Design**: `sm:`, `md:`, `lg:`, `xl:` prefixes
+- **Custom Colors**: Standard palette + custom theme colors
+- **Spacing System**: Consistent spacing with Tailwind's scale
+- **Typography**: Font weights, sizes, and line heights
+
+#### Layout Structure
+- **Grid System**: `grid-cols-1 xl:grid-cols-[280px_1fr_320px]`
+- **Sticky Positioning**: Left sidebar only (`xl:sticky xl:top-8`)
+- **Responsive Behavior**: Stacked on mobile, three-column on desktop
 
 ## 🎨 Design Philosophy
 
@@ -174,15 +196,14 @@ This project demonstrates several key principles:
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe development
 - **[SSX](https://github.com/oscarotero/ssx)** - Server-side JSX rendering
 
-### **Modern CSS Features**
-- **CSS Custom Properties** - Dynamic theming and consistent design tokens
-- **CSS Grid & Flexbox** - Advanced layout systems
-- **CSS Animations** - Hardware-accelerated keyframe animations
-- **Backdrop Filter** - Modern glassmorphism effects
-- **CSS Gradients** - Dynamic background effects and text styling
-- **CSS Transforms** - 3D animations and smooth transitions
-- **CSS Filters** - Visual effects and image processing
-- **Container Queries** - Context-aware responsive design
+### **CSS Framework & Styling**
+- **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework with Play CDN
+- **Custom Theme Configuration** - Extended color palette and design tokens via `@theme`
+- **Responsive Design System** - Mobile-first approach with consistent breakpoints
+- **Custom Animations** - Preserved hero effects with CSS keyframes
+- **Modern CSS Features** - Grid, Flexbox, transforms, and filters
+- **Utility Classes** - Maintainable styling with atomic CSS approach
+- **Performance Optimized** - Only used utilities included in final bundle
 
 ### **Visual Assets**
 - **[Picsum Photos](https://picsum.photos/)** - Beautiful placeholder images
@@ -194,6 +215,8 @@ This project demonstrates several key principles:
 - [Lume Documentation](https://lume.land/docs/)
 - [Deno Manual](https://docs.deno.com/)
 - [JSX Plugin Guide](https://lume.land/plugins/jsx/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs/)
+- [Tailwind Play CDN Guide](https://tailwindcss.com/docs/installation/play-cdn)
 - [Deno Deploy](https://deno.com/deploy) - Optional for hosting
 
 ## 🤝 Contributing
@@ -210,23 +233,28 @@ This is a sample project designed to demonstrate Lume capabilities. Feel free to
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🚀 Modern CSS Showcase
+## 🚀 Modern CSS & Tailwind Showcase
 
-This project serves as a comprehensive demonstration of modern web technologies:
+This project demonstrates the power of combining Tailwind CSS with custom animations:
 
-### **CSS Features Demonstrated**
-- **Advanced Animations**: Matrix-style code rain, floating elements, gradient shifts
+### **Tailwind CSS Features**
+- **Utility-First Approach**: All components styled with atomic CSS utilities
+- **Custom Theme Integration**: Extended color palette and design tokens
+- **Responsive Design System**: Mobile-first breakpoints and responsive utilities
+- **Play CDN Implementation**: Latest Tailwind v4 with zero build step
+- **Component Consistency**: Unified spacing, typography, and color systems
+
+### **Preserved Custom Animations**
+- **Hero Effects**: Matrix-style code rain, floating elements, gradient text
 - **Glassmorphism**: Backdrop blur effects and translucent surfaces
-- **Responsive Typography**: Fluid type scaling with `clamp()`
-- **Custom Properties**: CSS variables for maintainable theming
 - **Hardware Acceleration**: Transform-based animations for 60fps performance
 - **Visual Effects**: Multi-layer gradients, animated meshes, and dynamic backgrounds
 
-### **Performance Optimizations**
-- **Zero JavaScript**: All animations powered by CSS
-- **Efficient Selectors**: Optimized CSS for fast rendering
-- **Lazy Loading**: Strategic image loading for faster initial paint
-- **Modern Fonts**: Variable fonts with optimal loading strategies
+### **Performance Benefits**
+- **Optimized Bundle**: Only used utilities included in final CSS
+- **CDN Delivery**: Fast loading with Tailwind's browser runtime
+- **Zero Build Step**: No CSS compilation required for development
+- **Modern Architecture**: Best practices for maintainable styling
 
 ## 🎯 Use Cases
 
