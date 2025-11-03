@@ -2,41 +2,20 @@ import Hero from "./_components/Hero.tsx";
 import Sidebar from "./_components/Sidebar.tsx";
 import TimelineCard from "./_components/TimelineCard.tsx";
 import RightSidebar from "./_components/RightSidebar.tsx";
-
-interface TimelineItem {
-  year: number;
-  title: string;
-  desc: string;
-  category?: string;
-  icon?: string;
-  image?: string;
-}
-
-interface Milestone {
-  id: string;
-  title: string;
-  year: number;
-  isActive?: boolean;
-}
-
-interface SiteData {
-  timeline: TimelineItem[];
-  milestones: Milestone[];
-  stats: {
-    totalEntries: number;
-    yearsSpanned: number;
-    majorVersions: number;
-  };
-  quickFacts: string[];
-}
+import { createTimelineStore } from "./_data/timeline-store.ts";
+import type { SiteData, TimelineItem } from "./_types/timeline.ts";
 
 export const title = "The History of HTML";
 export const layout = "layout.tsx";
 
 export default (data: Lume.Data, _helpers: Lume.Helpers) => {
-  // Sort timeline data by year
+  // Get validated data from store
+  const store = createTimelineStore();
   const siteData = data.site as SiteData;
-  const sortedTimeline = [...siteData.timeline].sort((a: TimelineItem, b: TimelineItem) => a.year - b.year);
+  store.setData(siteData);
+  
+  // Sort timeline data by year with validation
+  const sortedTimeline = store.getTimeline();
 
   return (
     <>
@@ -45,7 +24,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
       <div class="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-[280px_1fr_320px] gap-8 px-4 xl:px-8 pt-16 items-start">
         {/* Left Sidebar */}
         <div class="xl:sticky xl:top-8 xl:h-fit">
-          <Sidebar milestones={siteData.milestones} title="HTML Milestones" />
+          <Sidebar milestones={store.getMilestones()} title="HTML Milestones" />
         </div>
 
         {/* Main Content */}
@@ -61,7 +40,7 @@ export default (data: Lume.Data, _helpers: Lume.Helpers) => {
 
         {/* Right Sidebar */}
         <div>
-          <RightSidebar stats={siteData.stats} quickFacts={siteData.quickFacts} />
+          <RightSidebar stats={store.getStats()} quickFacts={store.getQuickFacts()} />
         </div>
       </div>
     </>

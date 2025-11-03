@@ -1,8 +1,4 @@
-interface StatsData {
-  totalEntries: number;
-  yearsSpanned: number;
-  majorVersions: number;
-}
+import type { StatsData } from "../_types/timeline.ts";
 
 interface RightSidebarProps {
   stats: StatsData;

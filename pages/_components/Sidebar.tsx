@@ -1,9 +1,4 @@
-interface Milestone {
-  id: string;
-  title: string;
-  year: number;
-  isActive?: boolean;
-}
+import type { Milestone } from "../_types/timeline.ts";
 
 interface SidebarProps {
   milestones: Milestone[];

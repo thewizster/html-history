@@ -1,4 +1,7 @@
-export default {
+import { createTimelineStore } from "./timeline-store.ts";
+import type { SiteData } from "../_types/timeline.ts";
+
+const siteData: SiteData = {
   timeline: [
     {
       year: 1989,
@@ -263,3 +266,10 @@ export default {
     "W3C endorsed EME in 2023 for secure media playback"
   ]
 };
+
+// Initialize the store with validated data
+const store = createTimelineStore();
+store.setData(siteData);
+
+// Export for Lume compatibility
+export default siteData;

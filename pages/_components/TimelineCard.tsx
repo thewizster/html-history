@@ -1,11 +1,4 @@
-interface TimelineItem {
-  year: number;
-  title: string;
-  desc: string;
-  icon?: string;
-  image?: string;
-  category?: string;
-}
+import type { TimelineItem } from "../_types/timeline.ts";
 
 interface TimelineCardProps {
   item: TimelineItem;
