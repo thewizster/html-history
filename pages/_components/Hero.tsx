@@ -58,12 +58,12 @@ export default function Hero({ title, subtitle }: HeroProps) {
         
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-number">35+</div>
+            <div class="stat-number">32+</div>
             <div class="stat-label">Years</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <div class="stat-number">6</div>
+            <div class="stat-number">8</div>
             <div class="stat-label">Major Versions</div>
           </div>
           <div class="stat-divider"></div>
