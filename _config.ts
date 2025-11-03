@@ -3,7 +3,7 @@ import jsx from "lume/plugins/jsx.ts";
 
 const site = lume({
   src: "./pages",
-  dest: "./_site",
+  dest: "./docs",
 });
 
 // Add JSX support
