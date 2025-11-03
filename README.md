@@ -2,6 +2,8 @@
 
 A stunning, interactive timeline showcasing the evolution of HTML from its inception to the modern day. Built with [Lume](https://lume.land/) static site generator and [Deno](https://deno.land/), this project demonstrates how to create elegant, data-driven websites using cutting-edge web technologies and modern CSS features.
 
+[View Static Site Build (Github Pages)](https://thewizster.github.io/html-history/)
+
 ## 🌟 Features
 
 ### **🎨 Visual Experience**
