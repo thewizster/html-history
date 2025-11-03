@@ -57,7 +57,7 @@ timeline-site/
 │   ├── _includes/
 │   │   └── layout.tsx           # Base HTML layout with modern CSS
 │   └── index.page.tsx           # Main timeline page
-└── _site/                       # Generated static files (auto-created)
+└── docs/                        # Generated static files (auto-created)
 ```
 
 ## 🚀 Getting Started
